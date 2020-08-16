@@ -43,13 +43,15 @@ namespace Kogane.Internal
 				defaultName: string.Empty
 			);
 
+			folderPath = FileUtil.GetProjectRelativePath( folderPath );
+
 			if ( !OpenOkCancelDialog( $"{folderPath} フォルダ内のアセットを再シリアライズしますか？" ) ) return;
 
-			folderPath += "/";
+			var folderPathWithSlash = folderPath + "/";
 
 			var list = AssetDatabase
 					.GetAllAssetPaths()
-					.Where( c => c.StartsWith( folderPath ) )
+					.Where( c => c.StartsWith( folderPathWithSlash ) )
 				;
 
 			AssetDatabase.ForceReserializeAssets( list );
