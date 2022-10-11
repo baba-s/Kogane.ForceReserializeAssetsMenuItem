@@ -1,5 +1,5 @@
 {
-    "name": "UniForceReserializeAssetsMenu",
+    "name": "Kogane.ForceReserializeAssetsMenuItem",
     "references": [],
     "includePlatforms": [
         "Editor"

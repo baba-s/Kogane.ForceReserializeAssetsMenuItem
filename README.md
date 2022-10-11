@@ -1,4 +1,4 @@
-# UniForceReserializeAssetsMenu
+# Kogane Force Reserialize Assets Menu Item
 
 アセットを再シリアライズできるエディタ拡張
 
